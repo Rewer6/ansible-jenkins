@@ -2,7 +2,6 @@
 
 - name: Laboratorna
   hosts: all
-  become: yes
   tasks:
     - name: Update system
       apt:
