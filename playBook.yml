@@ -1,0 +1,25 @@
+---
+
+- name: Laboratorna
+  hosts: all
+  become: yes
+  tasks:
+    - name: Update system
+      apt:
+        upgrade: yes
+        update_cache: yes
+      tags: update_system
+
+    - name: Install ngnix
+      apt:
+        name: ngnix
+        state: present
+      notify: restart ngnix
+      tags: install_ngnix
+
+    - name: Install vpn
+      apt:
+        name: openvpn
+        state: latest
+      tags: install_vpn
+
