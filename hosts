@@ -1,1 +1,1 @@
-client01 ansible_host=192.168.0.101 ansible_user=yura ansible_password=admin
+client01 ansible_host=192.168.0.101 ansible_user=yura
